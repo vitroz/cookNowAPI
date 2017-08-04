@@ -1,0 +1,20 @@
+{>"layout" /}
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body class="container">
+	<div class="row" id="recipes">
+		<h1>RCPS</h1>
+	</div>
+</body>
+</html>
+
+<script type="text/javascript">
+	$.get( "recipes/", function( data ) {	  
+	  console.log(data);
+	  $('#recipes').append(data.rct_id);
+	  $('#recipes').append(data.rct_nome);	
+	});	
+</script>
